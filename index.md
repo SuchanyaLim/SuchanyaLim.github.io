@@ -17,9 +17,10 @@ My email address is of the form first_name.last_name@helsinki.fi.
 
 ## Courses I've Taken
 
-- [Introduction to Data Science](https://courses.helsinki.fi/DATA11001), fall 2025
-- [Command-Line Tools for Linguists](https://studies.helsinki.fi/KIK-LG221), fall 2025
-- [Cognitive Modelling Concepts](https://studies.helsinki.fi/LDA-C302), fall 2025
+- [Introduction to Linguistic Diversity and Digital Humanities](https://studies.helsinki.fi/courses/course-unit/otm-0cbf2f3d-6cbe-4689-8903-e68ddae3bffe/LDA-301), fall 2025
+- [Introduction to Data Science](https://studies.helsinki.fi/courses/course-unit/otm-f1abc596-92c2-43ec-b42e-dc8114b5247d/DATA11001), fall 2025
+- [Command-Line Tools for Linguists](https://studies.helsinki.fi/courses/course-unit/otm-92ee484e-456b-409f-a397-d9d2b6e40a2f/KIK-LG221), fall 2025
+- [Cognitive Modelling Concepts](https://studies.helsinki.fi/courses/course-unit/otm-d8ca22d5-9d65-4846-bf05-1c51c0c6e49c/LDA-C302), fall 2025
 
 ## Projects
 
@@ -29,4 +30,4 @@ My email address is of the form first_name.last_name@helsinki.fi.
 ## Misc. 
 
 - If you have a lot of time to spare, consider [Emacs](https://www.gnu.org/software/emacs/). 
-- [Linguistics is cool!](cool-linguistics-article.md)
+- [Linguistics is cool!](cool-linguistics-article-that-does-not-exist.md)
