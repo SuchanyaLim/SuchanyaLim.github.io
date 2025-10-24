@@ -4,8 +4,8 @@ layout: default
 
 ## Introduction
 
-<img src="assets/images/me.jpg" alt="Photo" hspace="20" width="30%" align="right"/> Hi! I'm Suchanya. I'm currently studying Cognitive Science in the Linguistic Diversity and Digital Humanities Masters at University of Helsinki. I'm interested in Human-Computer Interaction; mainly how cognitive science informs educational technology and instruction design, but also just interaction design in general.
-<br> <br> In my free time, I enjoy making things (cooking, knitting), and collecting skills - Learning new things is fun. Recently I've been spending time on some technical projects.
+<img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374" alt="Photo" hspace="20" width="30%" align="right"/> Hi! I'm Suchanya. I'm currently studying Cognitive Science in the Linguistic Diversity and Digital Humanities Masters at University of Helsinki. I'm interested in Human-Computer Interaction; mainly how cognitive science informs educational technology and instruction design, but also just interaction design in general.
+<br> <br> In my free time, I enjoy making things (cooking, knitting), and collecting skills - Learning new things is fun. Recently I've been spending time on some more technical projects.
 
 ## Find me on
 
@@ -30,4 +30,4 @@ My email address is of the form first_name.last_name@helsinki.fi.
 ## Misc. 
 
 - If you have a lot of time to spare, consider [Emacs](https://www.gnu.org/software/emacs/). 
-- [Linguistics is cool!](cool-linguistics-article-that-does-not-exist.md)
+- [Linguistics is cool!](https://en.wikipedia.org/wiki/Linguistics)
