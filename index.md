@@ -31,3 +31,4 @@ My email address is of the form first_name.last_name@helsinki.fi.
 
 - If you have a lot of time to spare, consider [Emacs](https://www.gnu.org/software/emacs/). 
 - [Linguistics is cool!](https://en.wikipedia.org/wiki/Linguistics)
+- Here is my [CV](assets/CV for GitPage.pdf)
