@@ -126,3 +126,33 @@ Here are some Git commands to get started:
 - **`git branch`**: Create a new branch to work on a feature or bug fix.
 - **`git checkout`**: Switch between branches.
 - **`git merge`**: Merge a branch into the main branch.
+
+#### Jekyll and GitHub Pages
+GitHub pages use Jekyll as its backend to generate a website directly from a GitHub repository. Jekyll is a Ruby-based static site generator that allows you to create a website using markdown files for content. To create a GitHub page, you need to:
+1. Create a GitHub repository
+	- The easiest is to setup a repository using your username in the format `username.github.io` 
+	- OR you could enable GitHub Pages for an existing repository in the repository's settings by selecting the source for GitHub Pages (usually `main`, `/docs`, or a separate branch).
+2. Create a `_config.yml`
+	- This file contains settings for your site, such as a **title**, **description**, or a [**Jekyll theme**](https://jekyllthemes.io)!
+```
+title: Title of Your Site!
+description: a short description
+theme: jekyll-theme-slate
+```
+Here is an example of a `_config.yml` file.
+3. Create your 'home page'
+	- This is usually an `index.md` file.
+	- You write your file in [Markdown](https://www.markdown-cheatsheet.com) and GitHub will automatically render it into HTML!
+4. Push to GitHub!
+	- Once you have your `_config.yml` and `index.md` files, you can push them to your repository.
+	- You can create other pages and link to them using Markdown's link syntax. Any `.md` files you create will automatically be converted to HTML by Jekyll when pushed to GitHub.
+GitHub Pages automatically builds and serves the HTML pages for you based on the content and structure you've set up. By default, Jekyll applies the `default` layout to pages unless you specify something else in the frontmatter of your file. You can create custom layouts by adding `.html` files to the `_layouts/` folder and adjusting the frontmatter of your file:
+```md
+---
+layout: about
+---
+
+# About Me
+```
+
+...and that's the course! We covered a lot of content, but there is still so much more to learn. Thank you for reading, I hope you found it helpful and that you'll consider this course as well.
