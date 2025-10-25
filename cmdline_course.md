@@ -4,14 +4,13 @@ layout: default
 
 ## Command-line Tools for Linguists (KIK-LG221)
 
-<img src="https://images.unsplash.com/photo-1629654291663-b91ad427698f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374" alt="Photo of cmdline" hspace="20" width="30%" align="right"/>
+<img src="https://images.unsplash.com/photo-1629654291663-b91ad427698f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374" alt="Photo of cmdline" hspace="20" width="40%" align="right"/>
 
 The command-line tools for linguists course introduces linguists to working in the command-line. The course goes over command-line basics, text processing, scripting, remote access, and version control.
 
 I highly recommend this course for anyone who needs some guided introduction to command-line magic and text processing workflows!
 
 ### Module 1: Introduction to Command Line Environments
-
 As the name says, Module 1 was an introduction to command-line environments. We went over how to set up our command-line environment ([WSL 2 for Windows users!](https://www.youtube.com/watch?v=8wDXqM_YjT0&t=1s)) and basic commands for navigating the command-line. We also learned about the Unix file system.
 
 We used commands like `ls` to list files, `cat` and `nano` to view and edit files. We covered file management commands such as `cp` to copy or `mv` to move files, `mkdir` to create directories and `cd` to navigate between them. We also learned about users, groups, and file permissions and using `chmod` to change file read, write, and execute permissions. Finally, we looked at `curl` for downloading text files which we will use for text processing in Module 2.
@@ -76,6 +75,8 @@ In Module 3, the focus was on scripts. Scripts allow us to take the single-line 
 We also learn about environment variables in UNIX systems. These variables control how programs behave. We modify them and save the changes in our configuration file to keep the changes permanent. 
 
 Finally, we learned about becoming a root user, which gives us full administrative privileges, and how we can install software through package managers like `apt`. We also covered installing Python packages via `pip`.
+
+Scripting was one of the topics I was looking forward to most as it can be very useful for automating both personal tasks and research. And learning about how to change and save environment variables has opened a lot of opportunities for tinkering with my system which is kind of overwhelming in a way. Installing software from the command-line using `apt` and installing Python packages with `pip` was relatively straightforward in comparison.
 #### Scripting Overview
 In a UNIX environment, **scripting** typically refers to writing **bash scripts**. A script is a sequence of commands written in a file, which can be executed as a program. To indicate that it’s a bash script, we start the file with `#!/bin/bash` (referred to as the 'shebang') to tell the system that the script should be run using bash.
 
@@ -102,3 +103,26 @@ chmod 755 myscript.sh
 ./myscript.sh
 ```
 This will run the script that is in your current directory (`./`). It is important to specify the path of your script because Bash usually looks for commands in your $PATH variable. If your current directory is not in the $PATH, bash will not find it.
+
+### Module 4: Using `ssh`, `scp`, and Version Control
+In Module 4 we looked at connecting to a remote server and version control with Git. We also learned about processes. 
+
+This Module was packed with valuable tools I expect to use regularly. I’ve always wanted to learn SSH and Git, but found the concepts a bit overwhelming at first. After using both for this course, I realized they’re not as complex as I feared. Now I feel much more comfortable with them and am looking forward to using them in my personal projects.
+
+`ssh` or Secure Shell is used to connect to remote servers, then you can work on files there as if it were your own computer! This is especially useful for research when you don’t have enough computational power on your own machine. For example, by `ssh`-ing into rental cloud-based systems like CSC, you can take advantage of their processing power to run resource-intensive tasks in minutes. 
+When using `ssh`, we also explored public and private keys, which are used for authentication. Setting up passwordless SSH allows for more secure and convenient connections.
+
+We also learned about `scp`, the Secure Copy Protocol which allows us to copy files to and from remote servers.
+
+Finally, Git. Git is one of the most widely used software. Git is a version control system used to manage code. It allows you to organize your work, track changes to your files, and collaborate with others! This can make it seem overwhelming, but it becomes easier once you start using it. While Git can be used locally, its more often used with remote repositories such as GitHub that make it easier to share code and collaborate with others. I recommend [this video](https://www.youtube.com/watch?v=HVsySz-h9r4) for an easy-to-follow tutorial for Git and GitHub. For those who don't have a GitHub account yet, it's free and easy to setup: [go to GitHub site](https://github.com). 
+
+Here are some Git commands to get started:
+- **`git clone`**: Clone a remote repository to your local machine.
+- **`git pull`**: Get the latest changes from the remote repository and merge them into your local branch.
+- **`git add`**: Stage changes to prepare them for commit. Use **`git reset`** if you need to unstage something.
+- **`git status`**: Check the current status of your working directory.
+- **`git log`**: View the commit history of the repository.
+- **`git commit -m "message"`**: Commit changes with a message describing what was done.
+- **`git branch`**: Create a new branch to work on a feature or bug fix.
+- **`git checkout`**: Switch between branches.
+- **`git merge`**: Merge a branch into the main branch.
