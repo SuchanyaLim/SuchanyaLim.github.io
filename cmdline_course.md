@@ -69,3 +69,36 @@ Apples are my favorite.
 This is because `sed` is case-sensitive and will only replace the first match on each line.
 
 Now this is just a short overview, `sed` is very powerful and quite complex. You can check out [this site](https://www.grymoire.com/Unix/Sed.html) for a more comprehensive explanation of `sed` commands.
+
+### Module 3: Scripting, Configuration Files and Installing Programs
+In Module 3, the focus was on scripts. Scripts allow us to take the single-line commands we typically use and combine them into reusable, organized snippets. Writing scripts allow us to easily edit and run sequences of commands.
+
+We also learn about environment variables in UNIX systems. These variables control how programs behave. We modify them and save the changes in our configuration file to keep the changes permanent. 
+
+Finally, we learned about becoming a root user, which gives us full administrative privileges, and how we can install software through package managers like `apt`. We also covered installing Python packages via `pip`.
+#### Scripting Overview
+In a UNIX environment, **scripting** typically refers to writing **bash scripts**. A script is a sequence of commands written in a file, which can be executed as a program. To indicate that it’s a bash script, we start the file with `#!/bin/bash` (referred to as the 'shebang') to tell the system that the script should be run using bash.
+
+As with other programming languages, bash scripts also have syntax for loops, conditionals, and input. Scripts can take input from the command line using special variables. For example, `$1`, `$2`, etc., represent arguments passed to the script:
+```bash
+#!/bin/bash
+echo "The first argument is: $1"
+```
+If you run this script like:
+```bash
+./myscript.sh hello
+```
+It would output:
+```bash
+The first argument is: hello
+```
+##### Running a Script
+To run a script, you have to make the script executable by using `chmod`:
+```bash
+chmod 755 myscript.sh
+```
+`755` is often used to grant the owner write or modify permissions and allow everyone else to execute the script. Then you can run the script using:
+```bash
+./myscript.sh
+```
+This will run the script that is in your current directory (`./`). It is important to specify the path of your script because Bash usually looks for commands in your $PATH variable. If your current directory is not in the $PATH, bash will not find it.
