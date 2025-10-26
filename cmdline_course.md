@@ -109,11 +109,13 @@ In Module 4 we looked at connecting to a remote server and version control with 
 
 This Module was packed with valuable tools I expect to use regularly. I’ve always wanted to learn SSH and Git, but found the concepts a bit overwhelming at first. After using both for this course, I realized they’re not as complex as I feared. Now I feel much more comfortable with them and am looking forward to using them in my personal projects.
 
+#### Remote Access with SSH
 `ssh` or Secure Shell is used to connect to remote servers, then you can work on files there as if it were your own computer! This is especially useful for research when you don’t have enough computational power on your own machine. For example, by `ssh`-ing into rental cloud-based systems like CSC, you can take advantage of their processing power to run resource-intensive tasks in minutes. 
 When using `ssh`, we also explored public and private keys, which are used for authentication. Setting up passwordless SSH allows for more secure and convenient connections.
 
 We also learned about `scp`, the Secure Copy Protocol which allows us to copy files to and from remote servers.
 
+#### Version Control with Git
 Finally, Git. Git is one of the most widely used software. Git is a version control system used to manage code. It allows you to organize your work, track changes to your files, and collaborate with others! This can make it seem overwhelming, but it becomes easier once you start using it. While Git can be used locally, its more often used with remote repositories such as GitHub that make it easier to share code and collaborate with others. I recommend [this video](https://www.youtube.com/watch?v=HVsySz-h9r4) for an easy-to-follow tutorial for Git and GitHub. For those who don't have a GitHub account yet, it's free and easy to setup: [go to GitHub site](https://github.com). 
 
 Here are some Git commands to get started:
@@ -147,12 +149,5 @@ Here is an example of a `_config.yml` file.
 	- Once you have your `_config.yml` and `index.md` files, you can push them to your repository.
 	- You can create other pages and link to them using Markdown's link syntax. Any `.md` files you create will automatically be converted to HTML by Jekyll when pushed to GitHub.
 GitHub Pages automatically builds and serves the HTML pages for you based on the content and structure you've set up. By default, Jekyll applies the `default` layout to pages unless you specify something else in the frontmatter of your file. You can create custom layouts by adding `.html` files to the `_layouts/` folder and adjusting the frontmatter of your file:
-```md
----
-layout: about
----
-
-# About Me
-```
 
 ...and that's the course! We covered a lot of content, but there is still so much more to learn. Thank you for reading, I hope you found it helpful and that you'll consider this course as well.
