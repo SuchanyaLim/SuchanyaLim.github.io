@@ -26,6 +26,7 @@ Users can also be organized into groups, which makes it easy to set file permiss
 - Read (`r`): can view file
 - Write (`w`): can edit or delete file
 - Execute (`x`): can run the file
+
 You can change file permissions using the command `chmod`, for example:
 ```
 chmod u+r file.txt
