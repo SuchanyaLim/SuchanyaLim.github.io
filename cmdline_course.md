@@ -17,6 +17,27 @@ We used commands like `ls` to list files, `cat` and `nano` to view and edit file
 
 This week was a good refresher for those who have used the command-line before. It was helpful to have everything explained in context. What I found most helpful was setting up WSL 2 as that had always intimidated me for some reason. I also appreciated the explanation on groups and file permissions.
 
+#### The UNIX File System
+The UNIX File system has a few differences from Windows. `/bin` and `/home` are two important directories we often encounter. `/bin` contains executables (which can be programs, or commands we use like `ls`), while `/home` is where a user's personal files are stored. 
+
+A UNIX computer can have several users with different permissions. The `root` user has the highest privileges and can make system-wide changes like installing packages or software and modifying files. 
+
+Users can also be organized into groups, which makes it easy to set file permissions for multiple users at once. A file can have permissions, specifically: 
+- Read (`r`): can view file
+- Write (`w`): can edit or delete file
+- Execute (`x`): can run the file
+You can change file permissions using the command `chmod`, for example:
+```
+chmod u+r file.txt
+```
+This gives the user (owner) read-only access to a file. You can also set multiple permissions at once:
+```
+chmod u=rx,g=r file.txt
+```
+This would allow the user to read and execute the file, while giving group members read-only access.
+
+Execute permissions are especially important for making shell scripts executable (so we can use them!), which we will go over in Module 3 (scripting).
+
 ### Module 2: Text Processing in UNIX
 The module titles are aptly named, in Module 2 we went over text processing in a UNIX system and the differences between UNIX and DOS (Windows). We learn about character-encodings, and commands for processing and searching text files: `grep` and `sed`. Finally, we learn how to turn long texts into structured text-files.
 
@@ -60,14 +81,31 @@ and we use the sed command on it like so:
 ```
 sed 's/apples/oranges/' file.txt
 ```
-the output would look like:
+`sed` would replace 'apples' with 'oranges' and the output would look like:
 ```
 I love oranges! Apples are nice.
 Apples are my favorite.
 ```
-This is because `sed` is case-sensitive and will only replace the first match on each line.
+This is because `sed` is case-sensitive and only works on the first match on each line, so it can only replace 'apples' and not 'Apples' on the second line.
 
 Now this is just a short overview, `sed` is very powerful and quite complex. You can check out [this site](https://www.grymoire.com/Unix/Sed.html) for a more comprehensive explanation of `sed` commands.
+
+#### Text Processing Pipelines
+This is one of the more important parts of the course for linguists. We learned how to implement simple text processing pipelines using the pipe `|` to connect commands to turn raw text into useful data for analysis. 
+
+As a little introduction: using the `tr` command, we learned how to convert a text file into a word frequency list to see how often each word appears.
+```
+cat file.txt | tr -s '\n\r\t ' '\n' | tr -dc "A-Za-z0-9\n'" | sort | uniq -c | sort -nr > text.freq
+```
+With the pipe, we can direct the output of `cat text.txt` (which is the entire file contents), to the next command `tr`. The command `tr` transforms text similar to "find and replace" in text editors. 
+- `tr -s '\n\r\t ' '\n'` replaces newline (`\n`), return (`\r`), tab (`\t`), and space characters with a newline, creating a one-word-per-line file. The `-s` option squeezes repeated spaces or blank lines into a single newline. 
+- We use `tr` again with the `-d` and `-c` options to delete characters not in `"A-Za-z0-9\n'"`. This will remove punctuation and keep only characters that are part of a word. 
+- Then, we `sort` the words alphabetically so that `uniq -c` can count duplicates (`-c` will add the number of times the word occurs before each word). 
+- We `sort` again using `-nr` to order the results numerically and in reverse (so that the most frequent words are at the top). 
+- Finally, we direct our output to a file called `text.freq`
+This might seem long and a bit overwhelming, but it's a straightforward way to turn plain text into structured data using only a few commands.
+
+In this chapter, we also learned how to compute sentence-level statistics by generating a "sentence-per-line" file using `sed` and a similar process for word n-grams (sequences of n consecutive words) which are commonly used in language technology. Although I will leave those examples out so this section does not get too long.
 
 ### Module 3: Scripting, Configuration Files and Installing Programs
 In Module 3, the focus was on scripts. Scripts allow us to take the single-line commands we typically use and combine them into reusable, organized snippets. Writing scripts allow us to easily edit and run sequences of commands.
