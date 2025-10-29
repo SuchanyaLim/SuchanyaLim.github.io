@@ -28,7 +28,7 @@ Commands used in this Module:
 - `cut` - extract columns from files
 - `tr` - translate or delete characters
 
-Here is a Cheatsheet for commonly used regex expressions
+Here is a Cheatsheet for some common regex expressions
 
 | Regex       | Description                                                | Examples                                                        |
 | ----------- | ---------------------------------------------------------- | --------------------------------------------------------------- |
@@ -135,9 +135,9 @@ GitHub pages use Jekyll as its backend to generate a website directly from a Git
 	- The easiest is to setup a repository using your username in the format `username.github.io` 
 	- OR you could enable GitHub Pages for an existing repository in the repository's settings by selecting the source for GitHub Pages (usually `main`, `/docs`, or a separate branch).
 2. Create a `_config.yml`
-	- This file contains settings for your site, such as a **title**, **description**, or a [**Jekyll theme**](https://jekyllthemes.io)!
+	- This file contains settings for your site, such as a **title**, **description**, or a [**Jekyll theme**](https://jekyllthemes.io).
 ```
-title: Title of Your Site!
+title: Title of Your Site
 description: a short description
 theme: jekyll-theme-slate
 ```
@@ -147,7 +147,7 @@ Here is an example of a `_config.yml` file.
 	- You write your file in [Markdown](https://www.markdown-cheatsheet.com) and GitHub will automatically render it into HTML!
 4. Push to GitHub!
 	- Once you have your `_config.yml` and `index.md` files, you can push them to your repository.
-	- You can create other pages and link to them using Markdown's link syntax. Any `.md` files you create will automatically be converted to HTML by Jekyll when pushed to GitHub.
-GitHub Pages automatically builds and serves the HTML pages for you based on the content and structure you've set up. By default, Jekyll applies the `default` layout to pages unless you specify something else in the frontmatter of your file. You can create custom layouts by adding `.html` files to the `_layouts/` folder and adjusting the frontmatter of your file:
+	- You can create other pages and link to them using Markdown's link syntax. Any `.md` files you create will automatically be converted to HTML by Jekyll when pushed to GitHub as long as they are in the correct directory.
+GitHub Pages automatically builds and serves the HTML pages for you based on the content and structure you've set up. By default, Jekyll applies the `default` layout to pages unless you specify something else in the frontmatter of your file. You can create custom layouts by adding `.html` files to the `_layouts/` folder and adjusting the frontmatter of your file accordingly.
 
 ...and that's the course! We covered a lot of content, but there is still so much more to learn. Thank you for reading, I hope you found it helpful and that you'll consider this course as well.
